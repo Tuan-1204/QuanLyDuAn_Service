@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="GUI/GUI.csproj">
+    <BuildDependency Project="MyApp.WcfService/MyApp.WcfService.csproj" />
+  </Project>
+  <Project Path="MyApp.BLL/MyApp.BLL.csproj" />
+  <Project Path="MyApp.DAL/MyApp.DAL.csproj" />
+  <Project Path="MyApp.DTO/MyApp.DTO.csproj" />
+  <Project Path="MyApp.WcfService/MyApp.WcfService.csproj" />
+</Solution>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50455/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50455/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50455/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyApp.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Nhanvien_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_Update" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nhanvien_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nhanvien_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_Update" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Duan_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Duan_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_Update" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_GetReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_GetReport" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nvd_GetReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nvd_GetReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Nhanvien_GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nhanvien_GetAll" message="tns:IService1_Nhanvien_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nhanvien_GetAllResponse" message="tns:IService1_Nhanvien_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nhanvien_Insert" message="tns:IService1_Nhanvien_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nhanvien_InsertResponse" message="tns:IService1_Nhanvien_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nhanvien_Update" message="tns:IService1_Nhanvien_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nhanvien_UpdateResponse" message="tns:IService1_Nhanvien_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nhanvien_Delete" message="tns:IService1_Nhanvien_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nhanvien_DeleteResponse" message="tns:IService1_Nhanvien_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Duan_GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Duan_GetAll" message="tns:IService1_Duan_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Duan_GetAllResponse" message="tns:IService1_Duan_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Duan_Insert" message="tns:IService1_Duan_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Duan_InsertResponse" message="tns:IService1_Duan_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Duan_Update" message="tns:IService1_Duan_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Duan_UpdateResponse" message="tns:IService1_Duan_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Duan_Delete" message="tns:IService1_Duan_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Duan_DeleteResponse" message="tns:IService1_Duan_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nvd_Insert" message="tns:IService1_Nvd_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nvd_InsertResponse" message="tns:IService1_Nvd_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nvd_Update" message="tns:IService1_Nvd_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nvd_UpdateResponse" message="tns:IService1_Nvd_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nvd_Delete" message="tns:IService1_Nvd_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nvd_DeleteResponse" message="tns:IService1_Nvd_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_GetReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nvd_GetReport" message="tns:IService1_Nvd_GetReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nvd_GetReportResponse" message="tns:IService1_Nvd_GetReport_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Nhanvien_GetAll">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nhanvien_GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Insert">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nhanvien_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Update">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nhanvien_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nhanvien_Delete">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nhanvien_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Duan_GetAll">
+      <soap:operation soapAction="http://tempuri.org/IService1/Duan_GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Insert">
+      <soap:operation soapAction="http://tempuri.org/IService1/Duan_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Update">
+      <soap:operation soapAction="http://tempuri.org/IService1/Duan_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Duan_Delete">
+      <soap:operation soapAction="http://tempuri.org/IService1/Duan_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Insert">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nvd_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Update">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nvd_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_Delete">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nvd_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nvd_GetReport">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nvd_GetReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:50455/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
