@@ -10,41 +10,45 @@ namespace MyApp.BUS
         private readonly NhanvienDuanDal nvduan = new NhanvienDuanDal();
 
         // Thêm kèm Bắt lỗi 
-        public void Insert(NhanvienDuanDto dto)
+        public string Insert(NhanvienDuanDto dto)
         {
             // Bắt lỗi trường Manv
             if (string.IsNullOrWhiteSpace(dto.Manv))
             {
-                throw new Exception("Mã nhân viên không được để trống!");
+                return "Mã nhân viên không được để trống!";
             }
 
             // Bắt lỗi trường Sogiocong
             if (dto.Sogiocong <= 0)
             {
-                throw new Exception("Số giờ công phải là số nguyên dương lớn hơn 0!");
+               return "Số giờ công phải lớn hơn 0!";
             }
 
             nvduan.Insert(dto);
+             
+            return ""; // Trả về chuỗi rỗng nếu không có lỗi
         }
 
         // Sửa kèm Bắt lỗi
-        public void Update(NhanvienDuanDto dto)
+        public string Update(NhanvienDuanDto dto)
         {
             if (dto.Sogiocong <= 0)
             {
-                throw new Exception("Số giờ công cập nhật phải lớn hơn 0!");
+            return "Số giờ công phải lớn hơn 0!";
             }
             nvduan.Update(dto);
+            return "";
         }
 
         //  Xóa
-        public void Delete(string manv, string mada)
+        public string Delete(string manv, string mada)
         {
             if (string.IsNullOrEmpty(manv) || string.IsNullOrEmpty(mada))
             {
-                throw new Exception("Phải chọn bản ghi cần xóa!");
+                return "Phải chọn bản ghi để xóa !";
             }
             nvduan.Delete(manv, mada);
+            return "";
         }
 
         //  Lấy dữ liệu Report 

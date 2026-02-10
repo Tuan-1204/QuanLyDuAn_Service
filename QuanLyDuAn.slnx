@@ -1,9 +1,9 @@
 <Solution>
-  <Project Path="GUI/GUI.csproj">
+  <Project Path="GUI/GUI.csproj" Id="b63a2bd9-d899-457a-8b48-2c8592f0b1f0">
     <BuildDependency Project="MyApp.WcfService/MyApp.WcfService.csproj" />
   </Project>
-  <Project Path="MyApp.BLL/MyApp.BLL.csproj" />
-  <Project Path="MyApp.DAL/MyApp.DAL.csproj" />
-  <Project Path="MyApp.DTO/MyApp.DTO.csproj" />
-  <Project Path="MyApp.WcfService/MyApp.WcfService.csproj" />
+  <Project Path="MyApp.BLL/MyApp.BLL.csproj" Id="c61a44b4-5912-4d9a-ae91-1ba63fafa067" />
+  <Project Path="MyApp.DAL/MyApp.DAL.csproj" Id="2bcee811-6537-487d-a29f-a3f5202683ba" />
+  <Project Path="MyApp.DTO/MyApp.DTO.csproj" Id="c4167209-46ea-4f4d-aeb9-c8b94aaa6d69" />
+  <Project Path="MyApp.WcfService/MyApp.WcfService.csproj" Id="b19f294d-0697-405d-82cc-7677e14f604f" />
 </Solution>

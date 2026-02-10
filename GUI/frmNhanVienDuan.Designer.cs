@@ -37,10 +37,10 @@
             this.cboDuAn = new System.Windows.Forms.ComboBox();
             this.txtSoGioCong = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.dgvNhanVienDuan = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -129,7 +129,7 @@
             this.cboNhanVien.FormattingEnabled = true;
             this.cboNhanVien.Location = new System.Drawing.Point(297, 46);
             this.cboNhanVien.Name = "cboNhanVien";
-            this.cboNhanVien.Size = new System.Drawing.Size(632, 36);
+            this.cboNhanVien.Size = new System.Drawing.Size(632, 29);
             this.cboNhanVien.TabIndex = 4;
             // 
             // cboDuAn
@@ -138,7 +138,7 @@
             this.cboDuAn.FormattingEnabled = true;
             this.cboDuAn.Location = new System.Drawing.Point(297, 89);
             this.cboDuAn.Name = "cboDuAn";
-            this.cboDuAn.Size = new System.Drawing.Size(632, 36);
+            this.cboDuAn.Size = new System.Drawing.Size(632, 29);
             this.cboDuAn.TabIndex = 5;
             // 
             // txtSoGioCong
@@ -146,7 +146,7 @@
             this.txtSoGioCong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSoGioCong.Location = new System.Drawing.Point(297, 132);
             this.txtSoGioCong.Name = "txtSoGioCong";
-            this.txtSoGioCong.Size = new System.Drawing.Size(632, 34);
+            this.txtSoGioCong.Size = new System.Drawing.Size(632, 29);
             this.txtSoGioCong.TabIndex = 6;
             // 
             // tableLayoutPanel2
@@ -165,31 +165,20 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(632, 37);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
-            // btnThem
+            // btnDong
             // 
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnThem.Location = new System.Drawing.Point(3, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(152, 31);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSua.Location = new System.Drawing.Point(161, 3);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(152, 31);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnDong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDong.Location = new System.Drawing.Point(477, 3);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(152, 31);
+            this.btnDong.TabIndex = 3;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnXoa
             // 
@@ -202,16 +191,27 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnDong
+            // btnSua
             // 
-            this.btnDong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDong.Location = new System.Drawing.Point(477, 3);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(152, 31);
-            this.btnDong.TabIndex = 3;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            this.btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSua.Location = new System.Drawing.Point(161, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(152, 31);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThem.Location = new System.Drawing.Point(3, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(152, 31);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvNhanVienDuan
             // 
@@ -231,7 +231,7 @@
             // 
             // frmNhanVienDuan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 803);
             this.Controls.Add(this.tableLayoutPanel1);

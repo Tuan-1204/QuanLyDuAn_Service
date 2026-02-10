@@ -46,23 +46,36 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            //Kiểm tra dữ liệu các trường trước khi thêm
+            if(cboNhanVien.SelectedValue == null || cboDuAn.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên và dự án!");
+                return;
+            }
+
+            //ép kiểu dữ liệu và kiểm tra số giờ công
+            if (!int.TryParse(txtSoGioCong.Text, out int sogiocong) || sogiocong <= 0)
+            {
+                MessageBox.Show("Số giờ công phải là một số nguyên dương!");
+                return;
+            }
+
+            //sử dụng try-catch để bắt lỗi khi gọi service
             try
             {
                 NhanvienDuanDto dto = new NhanvienDuanDto
                 {
                     Manv = cboNhanVien.SelectedValue.ToString(),
                     Mada = cboDuAn.SelectedValue.ToString(),
-                    Sogiocong = int.Parse(txtSoGioCong.Text)
+                    Sogiocong = sogiocong
                 };
-
                 client.Nvd_Insert(dto);
-                MessageBox.Show("Phân công nhân viên vào dự án thành công!");
+                MessageBox.Show("Thêm phân công thành công!");
                 LoadDataGridView();
             }
             catch (Exception ex)
             {
-                //  Hiển thị lỗi từ BUS (Mã trống hoặc giờ công <= 0)
-                MessageBox.Show("Lỗi nghiệp vụ: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -107,7 +120,7 @@ namespace GUI
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void dgvNhanVienDuan_CellClick(object sender, DataGridViewCellEventArgs e)
