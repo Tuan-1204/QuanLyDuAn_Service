@@ -29,14 +29,14 @@ Nhân viên: Quản lý thông tin hồ sơ nhân viên (Thêm, Sửa, Xóa).
 
 Dự án: Quản lý danh sách các dự án đang triển khai và địa điểm thực hiện.
 
-3.2. Nghiệp vụ phân công (Câu 1 & 3)
+3.2. Nghiệp vụ phân công 
 Thực hiện phân công nhân viên vào từng dự án cụ thể.
 
 Theo dõi và cập nhật số giờ công của nhân viên.
 
 Ràng buộc nghiệp vụ: Hệ thống tự động bắt lỗi và thông báo nếu dữ liệu nhập vào không hợp lệ (như thiếu mã hoặc số giờ công không hợp lệ) từ tầng BUS.
 
-3.3. Báo cáo thống kê (Câu 2)
+3.3. Báo cáo thống kê
 Sử dụng RDLC để kết xuất báo cáo chuyên nghiệp.
 
 Điều kiện lọc: Danh sách nhân viên tham gia dự án tại Hà Nội và có số giờ công > 10.
@@ -111,3 +111,4 @@ INSERT INTO Duan VALUES ('DA02', N'Lắp đặt hệ thống mạng', N'Quận 1
 INSERT INTO NhanvienDuan VALUES ('NV01', 'DA01', 48); -- Thỏa mãn điều kiện báo cáo
 INSERT INTO NhanvienDuan VALUES ('NV02', 'DA02', 15); -- Không thỏa mãn (Địa điểm)
 GO
+
